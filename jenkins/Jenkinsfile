@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'curl -o - http://google.com'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
